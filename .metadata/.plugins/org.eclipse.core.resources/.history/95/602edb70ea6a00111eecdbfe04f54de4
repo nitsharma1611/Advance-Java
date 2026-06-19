@@ -1,0 +1,16 @@
+package com.rays.exercise;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.rays.JDBCDataSource;
+
+public class MarksheetModel {
+public long add(MarksheetBean bean) throws ClassNotFoundException, SQLException {
+	Connection conn=JDBCDataSource.getConnection();
+	
+	
+	
+	return 0;
+}
+}

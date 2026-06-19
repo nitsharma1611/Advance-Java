@@ -1,0 +1,20 @@
+package com.rays.jdbc.excercise;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MarksheetModel {
+	public void add(MarksheetBean bean) throws SQLException, ClassNotFoundException {
+		Connection conn = JDBCDataSource.getConnection();
+
+		Statement st = conn.createStatement();
+		String sql = "insert into employee values(31,'Nitin','NCS',87000)";
+		int i = st.executeUpdate(sql);
+		if (i > 0) {
+			System.out.println("Record Successfully");
+		} else {
+			System.out.println("Something Missing");
+		}
+	}
+}

@@ -1,0 +1,22 @@
+package com.rays.model.test;
+
+import java.sql.SQLException;
+
+import com.rays.bean.ExamBean;
+import com.rays.model.ExamModel;
+
+public class ExamModelTest {
+	final static ExamModel model = new ExamModel();
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+testAdd();
+	}
+
+	public static void testAdd() throws ClassNotFoundException, SQLException {
+ExamBean bean=new ExamBean(111, "Java", "2025-05-26", 74,33);
+	model.add(bean);
+	
+	
+	}
+
+}
