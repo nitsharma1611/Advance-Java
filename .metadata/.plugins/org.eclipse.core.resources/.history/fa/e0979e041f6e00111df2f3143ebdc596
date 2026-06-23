@@ -1,0 +1,5 @@
+package com.rays.servletdemo;
+
+public class UserBean {
+
+}

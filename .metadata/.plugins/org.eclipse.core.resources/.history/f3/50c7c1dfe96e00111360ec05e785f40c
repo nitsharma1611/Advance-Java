@@ -1,0 +1,20 @@
+package com.rays.model.test;
+
+import java.sql.SQLException;
+
+import com.rays.model.UserModel;
+
+public class UserModelTest {
+	final static UserModel model = new UserModel();
+
+	public static void main(String[] args) {
+		testNextPK();
+
+	}
+
+	public static void testNextPK() throws ClassNotFoundException, SQLException {
+		System.out.println(model.nextPK());
+
+	}
+
+}

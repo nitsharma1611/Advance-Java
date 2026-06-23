@@ -1,0 +1,38 @@
+package com.rays.servletdemo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserModel {
+	public int nextPK() throws ClassNotFoundException, SQLException {
+		int pk=0;
+		Connection conn=JDBCConnection.getConnection();
+		String sql="select max(*) from user";
+		PreparedStatement pst=conn.prepareStatement(sql);
+		ResultSet rs= pst.executeQuery();
+		while(rs.next()) {
+			pk=rs.getInt("id");
+		}
+		return pk+1;
+	}
+	
+public int add(UserBean bean) throws ClassNotFoundException, SQLException {
+	Connection conn=JDBCConnection.getConnection();
+	String sql="insert into user values(?,?,?)";
+	PreparedStatement pst=conn.prepareStatement(sql);
+	pst.setInt(1, nextPK());
+	pst.setString(2, bean.getUsername());
+	pst.setString(3,bean.getAddress());
+	int record=pst.executeUpdate();
+	if(record>0) {
+		System.out.println("Record Inserted ");
+	}else {
+		System.out.println("Something Wrong");
+	}
+	
+	return 0;
+}
+
+}

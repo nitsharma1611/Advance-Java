@@ -1,0 +1,30 @@
+package com.rays.model.test;
+
+import java.sql.SQLException;
+
+import com.rays.bean.UserBean;
+import com.rays.model.UserModel;
+
+public class UserModelTest {
+	final static UserModel model = new UserModel();
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	//	testNextPK();
+testAdd();
+	}
+
+public static void testAdd() {
+		UserBean bean=new UserBean("nitin", "sharma", "nit@gmail.com", "123", "2010-06-20");
+		
+	
+	
+	
+	}
+
+	public static void testNextPK() throws ClassNotFoundException, SQLException {
+		System.out.println(model.nextPK());
+
+	}
+	
+
+}

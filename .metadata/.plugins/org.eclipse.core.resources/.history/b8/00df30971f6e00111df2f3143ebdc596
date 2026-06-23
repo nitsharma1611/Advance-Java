@@ -1,0 +1,24 @@
+package com.rays.servletdemo;
+
+public class UserBean {
+private String name;
+
+private UserBean(String name) {
+	super();
+	this.name = name;
+}
+
+private UserBean() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+}

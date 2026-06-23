@@ -1,0 +1,19 @@
+package com.rays.jdbc;
+
+import java.sql.SQLException;
+
+public class MarksheetTest {
+	static final MarksheetModel model = new MarksheetModel();
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+testAdd();
+	}
+
+	public static void testAdd() throws ClassNotFoundException, SQLException {
+		int nextPk = model.nextPK();
+		MarksheetBean bean = new MarksheetBean(nextPk, "131", "nitin", 55, 74, 89);
+		model.add(bean);
+
+	}
+
+}

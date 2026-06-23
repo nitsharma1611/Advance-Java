@@ -1,0 +1,9 @@
+package com.rays.servletdemo;
+
+public class UserModel {
+public long add() {
+	
+	return 0;
+	
+}
+}

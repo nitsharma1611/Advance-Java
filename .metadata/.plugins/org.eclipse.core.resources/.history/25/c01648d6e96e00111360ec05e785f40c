@@ -1,0 +1,14 @@
+package com.rays.model.test;
+
+public class UserModelTest {
+public static void main(String[] args) {
+	testNextPK();
+	
+}
+
+public static void testNextPK() {
+	
+	
+}
+
+}

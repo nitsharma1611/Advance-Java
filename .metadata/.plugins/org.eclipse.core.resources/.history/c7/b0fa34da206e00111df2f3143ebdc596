@@ -1,0 +1,11 @@
+package com.rays.servletdemo;
+
+import java.sql.Connection;
+
+public class UserModel {
+public long add() {
+	Connection conn=JDBCC
+	
+	
+}
+}

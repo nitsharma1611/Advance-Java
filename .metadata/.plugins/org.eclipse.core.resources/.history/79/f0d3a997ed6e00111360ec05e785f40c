@@ -1,0 +1,46 @@
+package com.rays.model.test;
+
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.rays.bean.UserBean;
+import com.rays.model.UserModel;
+
+public class UserModelTest {
+	final static UserModel model = new UserModel();
+	final static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, ParseException {
+		// testNextPK();
+//testAdd();
+		testUpdate();
+	}
+
+	public static void testUpdate() throws ParseException, ClassNotFoundException, SQLException {
+		Date dob = sdf.parse("2000-05-15");
+		UserBean bean=new UserBean();
+bean.setFirstName("krishna");
+bean.setLastName("karma");
+bean.setLogin("krishna@gmail.com");
+bean.setPassword("1234");
+bean.setDob(dob);
+bean.setId(5);
+model.update(bean);
+	}
+
+	public static void testAdd() throws ParseException, ClassNotFoundException, SQLException {
+
+		Date dob = sdf.parse("2000-05-15");
+		UserBean bean = new UserBean("nitin", "sharma", "nit@gmail.com", "123", dob);
+		model.add(bean);
+
+	}
+
+	public static void testNextPK() throws ClassNotFoundException, SQLException {
+		System.out.println(model.nextPK());
+
+	}
+
+}
